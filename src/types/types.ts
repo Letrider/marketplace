@@ -16,7 +16,5 @@ export interface IButtonProps {
 	action?: () => void
 }
 
-export interface IGoogleIconProps extends IButtonProps {
-	size?: number
-}
+export type IGoogleIconProps = IButtonProps
 
