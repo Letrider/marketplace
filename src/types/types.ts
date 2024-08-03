@@ -4,7 +4,7 @@ type TypeButton = 'Primary' | 'Secondary'
 
 export interface ISlide {
 	url: string
-	isCurrent: boolean
+	isCurrent?: boolean
 	description: string
 }
 export interface ISliderProps {
