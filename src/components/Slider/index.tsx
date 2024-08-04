@@ -28,7 +28,7 @@ export default function SliderPage() {
 
 		>
 			{
-				Slides.map(slide => <Slide key={slide.description} description={slide.description} url={slide.url} />)
+				Slides.map(slide => <Slide key={slide.description} description={slide.description} url={slide.url} href={slide.href} />)
 
 			}
 		</Flickity>
