@@ -3,17 +3,17 @@ import { ISlide } from '@/types/types'
 export const Slides: Array<ISlide> = [
 	{
 		url: '/images/slides/0.png',
-		isCurrent: true,
+		href: '/', // slide link
 		description: 'lll'
 	},
 	{
 		url: '/images/slides/1.png',
-		isCurrent: false,
+		href: '/', // slide link
 		description: 'test'
 	},
 	{
 		url: '/images/slides/2.png',
-		isCurrent: false,
+		href: '/', // slide link
 		description: 'dfsdf'
 	},
 ]

@@ -4,8 +4,8 @@ type TypeButton = 'Primary' | 'Secondary'
 
 export interface ISlide {
 	url: string
-	isCurrent?: boolean
 	description: string
+	href: string
 }
 export interface ISliderProps {
 	slides: Array<ISlide>
