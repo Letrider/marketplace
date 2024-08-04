@@ -1,18 +1,15 @@
 import { IGoogleIconProps } from '@/types/types'
 
 
-export default function GoogleIcon({ title, size, action }: IGoogleIconProps) {
+export default function GoogleIcon({ title, action }: IGoogleIconProps) {
 	return (
-		<button className='button'>
+		<a>
 			<span
 				className="material-symbols-outlined"
-				style={{
-					fontSize: size + 'px'
-				}}
 				onClick={action}
 			>
 				{title}
 			</span>
-		</button>
+		</a>
 	)
 }

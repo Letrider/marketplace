@@ -1,8 +1,7 @@
 import { IButtonProps } from '@/types/types'
 import './Default.scss'
 
-export default function Button({ title, type = 'Primary', action = () => { } }: IButtonProps) {
-
+export default function Button({ title, type = 'Primary', action }: IButtonProps) {
 
 	return (
 		<button

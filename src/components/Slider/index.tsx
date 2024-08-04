@@ -1,30 +1,36 @@
-import { useState } from 'react'
 
 // styles
+import '@/styles/flickity.css'
 import './index.scss'
 
 // data
-import { Slides } from '@/data/Slides'
 
 // components
-import Slide from '@/components/Slide'
-import GoogleIcon from '@/components/UI/Button/googleIcon'
+import { Slides } from '@/data/Slides'
+import Flickity, { FlickityOptions } from 'react-flickity-component'
+import Slide from '../Slide'
 
-export default function Slider() {
-	const [currentSlide, setCurrentSlide] = useState(0)
-
+export default function SliderPage() {
+	const options: FlickityOptions = {
+		initialIndex: 0,
+		contain: true,
+		autoPlay: true
+	}
 
 	return (
-		<div className='slider'>
-			<GoogleIcon title='arrow_back_ios' size={20} action={() => { console.log('tap') }} />
+		<Flickity
+			className='slider'
+			disableImagesLoaded={false}
+			options={options}
+			elementType='div'
+			reloadOnUpdate
+			static
+
+		>
 			{
-				Slides.map(slide => <Slide key={slide.url} description={slide.description} url={slide.url} isCurrent={slide.isCurrent} />)
+				Slides.map(slide => <Slide key={slide.description} description={slide.description} url={slide.url} />)
+
 			}
-			<button className='slider__button-left'>
-				<span className="material-symbols-outlined slideIcon">
-					arrow_forward_ios
-				</span>
-			</button>
-		</div>
+		</Flickity>
 	)
 }
