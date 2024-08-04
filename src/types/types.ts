@@ -13,6 +13,7 @@ export interface ISliderProps {
 export interface IButtonProps {
 	title: string
 	type?: TypeButton
+	href?: string
 	action?: () => void
 }
 

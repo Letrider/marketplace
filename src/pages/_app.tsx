@@ -1,4 +1,6 @@
+
 import '@/styles/index.css'
+import '@/styles/reset.css'
 import type { AppProps } from 'next/app'
 
 export default function MarketplaceApp({ Component, pageProps }: AppProps) {

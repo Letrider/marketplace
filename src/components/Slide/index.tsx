@@ -16,11 +16,12 @@ export default function Slide({ url, description, href }: ISlide) {
 			{
 				href !== undefined ? (
 					<Link
-						href={'/'}
+						href={href}
 						className='slide'
 						style={{
 							...style,
 							objectFit: 'contain',
+
 						}}
 					/>
 				) : (

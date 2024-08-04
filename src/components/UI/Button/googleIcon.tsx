@@ -1,15 +1,31 @@
 import { IGoogleIconProps } from '@/types/types'
+import Link from 'next/link'
+import './googleIcon.scss'
 
-
-export default function GoogleIcon({ title, action }: IGoogleIconProps) {
+export default function GoogleIcon({ title, href, action }: IGoogleIconProps) {
 	return (
-		<a>
-			<span
-				className="material-symbols-outlined"
-				onClick={action}
-			>
-				{title}
-			</span>
-		</a>
+		<>
+			{
+				href ? (
+					<Link href={href} className='googleIcon href'>
+						<span
+							className="material-symbols-outlined"
+							onClick={action}
+						>
+							{title}
+						</span>
+					</Link>
+				) : (
+					<button className='googleIcon button'>
+						<span
+							className="material-symbols-outlined"
+							onClick={action}
+						>
+							{title}
+						</span>
+					</button>
+				)
+			}
+		</>
 	)
 }
