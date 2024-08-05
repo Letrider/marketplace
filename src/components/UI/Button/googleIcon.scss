@@ -1,4 +1,4 @@
-.googleIcon  {
+.googleIcon {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -7,6 +7,10 @@
 	color: white;
 	width: 24px;
 	height: 24.01px;
-	background-color: #252;
+	// background-color: #1312;
 	border-radius: 25px;
+
+	&.href {
+		color: rgb(116, 181, 116);
+	}
 }
